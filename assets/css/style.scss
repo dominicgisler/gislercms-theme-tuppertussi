@@ -1,17 +1,14 @@
+$primary: #B404AE;
+$body-color: #B404AE;
+$link-color: #B404AE;
+$link-hover-color: #FF00FF;
+
 @import '../../vendor/twbs/bootstrap/scss/bootstrap';
 
 $fa-font-path: "../webfonts" !default;
 @import '../../vendor/fortawesome/font-awesome/scss/fontawesome';
 @import '../../vendor/fortawesome/font-awesome/scss/solid';
 @import '../../vendor/fortawesome/font-awesome/scss/brands';
-
-body {
-  background: url('../img/bg.jpeg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 .background-cover {
   background-repeat: no-repeat;
@@ -27,4 +24,47 @@ body {
 #cookie-info {
   position: fixed;
   bottom: 0;
+}
+
+main * {
+  max-width: 100%;
+}
+
+a.logo {
+  .title {
+    font-size: 5rem;
+    padding-top: 1rem;
+    @media (max-width: map_get($grid-breakpoints, xl)) {
+      padding-top: 0;
+    }
+    @media (max-width: map_get($grid-breakpoints, lg)) {
+      font-size: 4rem;
+      padding-top: 0.7rem;
+    }
+    @media (max-width: map_get($grid-breakpoints, md)) {
+      font-size: 3rem;
+    }
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      font-size: 2rem;
+    }
+  }
+  text-decoration: none;
+  &:hover {
+    color: $link-color;
+  }
+}
+
+nav.navbar {
+  .navbar-brand, .navbar-toggler, .nav-link {
+    color: $white;
+  }
+  .nav-link {
+    &:hover {
+      color: lighten($link-hover-color, 30);
+    }
+  }
+}
+
+.shadow-primary {
+  box-shadow: 0 0 5rem $primary !important;
 }

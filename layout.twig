@@ -7,10 +7,12 @@
     </head>
     <body>
         <div class="container my-4">
-            {% include 'header.twig' %}
-            {% include 'navigation.twig' %}
-            {% include 'main.twig' %}
-            {% include 'footer.twig' %}
+            <div class="rounded shadow-primary">
+                {% include 'header.twig' %}
+                {% include 'navigation.twig' %}
+                {% include 'main.twig' %}
+                {% include 'footer.twig' %}
+            </div>
         </div>
         {% include 'cookie-info.twig' %}
         {% include 'scripts.twig' %}

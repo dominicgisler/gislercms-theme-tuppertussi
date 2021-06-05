@@ -27,4 +27,7 @@ $(function() {
     if (getCookie('accept-cookies') === "") {
         $('#cookie-info').removeClass('d-none');
     }
+    $('a.mail').click(function() {
+        window.location.href = 'mailto:' + $(this).html().replace('(at)', '@');
+    });
 });

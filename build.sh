@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm gcms-default-theme.zip
+rm gcms-tuppertussi.zip
 rm -rf dist
 mkdir dist
 cp -R * dist/.
@@ -28,6 +28,6 @@ cp -R * dist/.
   rm -rf vendor
 
   # zip
-  zip -r ../gcms-default-theme.zip *
+  zip -r ../gcms-tuppertussi.zip *
 )
 rm -rf dist
